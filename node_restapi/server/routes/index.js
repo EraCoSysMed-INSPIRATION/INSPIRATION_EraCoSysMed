@@ -49,22 +49,6 @@ router.get(`/compound_query/:term`, async (req, res, next) => {
     res.sendStatus(499)
   }
 });
-// views
-router.get('/documentation', (req, res) =>
-  res.render('documentation')  
-);
-router.get('/', (req, res) =>
-  res.render('home')  
-);
-router.get('/about', (req, res) =>
-  res.render('about')  
-);
-router.get('/contact', (req, res) =>
-  res.render('contact')  
-);
-
-
-
 
 // export
 module.exports = router;
