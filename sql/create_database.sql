@@ -284,3 +284,11 @@ CREATE TABLE IF NOT EXISTS nca(
     FOREIGN KEY(nca_parameter_id) REFERENCES nca_parameter(id)
 );
 --
+CREATE TABLE IF NOT EXISTS nca_matcher(
+    id INT AUTO_INCREMENT COMMENT "",
+    profile_id INT COMMENT "",
+    nca_id INT COMMENT "",
+    PRIMARY KEY(id),
+    FOREIGN KEY(profile_id) REFERENCES profile(id),
+    FOREIGN KEY(nca_id) REFERENCES nca(id)
+);
