@@ -9,7 +9,7 @@ Schema for the database, last updated 06/30/2021.
 
 ## Setting up the REST-API
 1. Install node and npm.
-2. In node_restapi/db create a folder 'config' and in it a 'config.json' file.
+2. In node_restapi/server/db create a folder 'config' and in it a 'config.json' file.
 3. The config.json should be formatted as follows:
     ```json
     {
@@ -23,4 +23,4 @@ Schema for the database, last updated 06/30/2021.
     }
     ```
 4. Navigate to node_restapi and run "npm run dev"
-5. To test, enter "localhost:3000/api/compounds" in your browser.
+5. To test, enter "localhost:3000/api/compound" in your browser.
