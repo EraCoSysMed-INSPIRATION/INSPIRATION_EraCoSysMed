@@ -7,6 +7,11 @@ Schema for the database, last updated 06/30/2021.
 
 <img src="./database_schema/database_schema_30_06_2021.svg">
 
+## Running the database locally
+1. Install mysql.
+2. Create and run a mysql-server instance.
+3. Create the database by running the script (sql/create_database.sql) in the mysql shell.
+
 ## Setting up the REST-API
 1. Install node and npm.
 2. In node_restapi/server/db create a folder 'config' and in it a 'config.json' file.
@@ -22,5 +27,5 @@ Schema for the database, last updated 06/30/2021.
         }
     }
     ```
-4. Navigate to node_restapi and run "npm run dev"
+4. Navigate to node_restapi and run "npm run dev".
 5. To test, enter "localhost:3000/api/compound" in your browser.
