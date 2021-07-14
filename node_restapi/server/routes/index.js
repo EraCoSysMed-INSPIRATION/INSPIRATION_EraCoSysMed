@@ -3,23 +3,14 @@ const db = require("../db");
 const router = express.Router();
 
 var tables = [
-  "compounds",
-  "compound_properties",
-  "demographics",
-  "demographics_matcher",
-  "events",
-  "events_matcher",
-  "genes",
-  "genetics",
-  "observations_matcher",
-  "pd_observations",
-  "pk_observations",
-  "profiles",
-  "profile_compounds",
-  "profile_compounds_matcher",
+  "compound",
+  "demographic",
+  "genetic",
+  "observation",
+  "profile",
   "reference",
 ];
-// REST emdpoints
+// REST endpoints
 tables.forEach((value) => {
   router.get(`/${value}/`, async (req, res, next) => {
     try {
