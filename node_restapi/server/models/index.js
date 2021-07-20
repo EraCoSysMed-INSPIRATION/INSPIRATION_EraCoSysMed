@@ -25,5 +25,19 @@ user_db.Sequelize = Sequelize;
 user_db.sequelize = sequelize;
 
 user_db.user = require("../models/usermodels.js")(sequelize, Sequelize);
+user_db.role = require("../models/rolemodel.js")(sequelize, Sequelize);
 
+user_db.role.belongsToMany(user_db.user, {
+  through: "user_roles",
+  foreignKey: "roleId",
+  otherKey: "userId"
+});
+user_db.user.belongsToMany(user_db.role, {
+  through: "user_roles",
+  foreignKey: "userId",
+  otherKey: "roleId",
+  as: "roles"
+});
+
+user_db.ROLES = ["user", "admin", "moderator"];
 module.exports = user_db;
